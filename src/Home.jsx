@@ -39,7 +39,7 @@ const Home = () =>{
             <div className="carousel-section">
                 <div className="title">
                     <h1>LATEST <span className="red">NEWS</span></h1>
-                </div>604604
+                </div>
                 <div className="carousel">
                     <div className="carousel-container">
                     {index!==0?<div className="item1"><img src={images[index-1]} alt="" width={355} height={360}/></div>:<div className="gray-card"></div>} 
