@@ -31,9 +31,8 @@ const Home = () =>{
         <Navbar/>
         <section className="body-section">
             <div className="video-section">
-                <video className="video" controls>
+                <video className="video" autoPlay loop muted controls preload="auto">
                     <source src={introVideo} type="video/mp4"/>
-
                 </video>
             </div>
             <div className="carousel-section">
