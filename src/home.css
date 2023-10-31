@@ -12,15 +12,12 @@ body{
     font-family: "Avenir",sans-serif;
 }
 .video-section{
-    width: 116.943rem;
-    max-width: 120rem;
-    height: 53.75rem; 
     margin-bottom: 2.188rem;
 }
 .video{
-    width: inherit;
-    height: inherit;
-    background-color: gray;
+    width: 116.943rem;
+    max-width: 120rem;
+    height: 53.75rem; 
 }
 .carousel-section{
     padding: 0.313rem 0rem;
