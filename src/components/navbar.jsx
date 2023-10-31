@@ -21,11 +21,11 @@ const Navbar = () =>{
     <div className="header-section">
         <div className="nav-items">
             <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>News</li>
-                <li>Lebnene Ele</li>
-                <li>Contact Us</li>
+                <li><a style={{color:"#C0202E"}} href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Lebnene Ele</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
         </div>
         <input type="text" placeholder="search..." className="header-search-bar"/>
