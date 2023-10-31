@@ -32,7 +32,7 @@ const Home = () =>{
         <section className="body-section">
             <div className="video-section">
                 <video className="video" controls>
-                    <source src={introVideo} type="video/mp4" />
+                    <source src={introVideo} type="video/mp4"/>
 
                 </video>
             </div>
