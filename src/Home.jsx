@@ -58,7 +58,7 @@ const Home = () =>{
                             </div>:null}
                         </div>
                        <div className="item3"><img src={images[(index+1)%length]} alt="" width={355} height={360}/></div>
-                        <div className="arrows" onMouseEnter={handleShowDetails}>
+                        <div className="arrows">
                             <button className="carousel-btns" onClick={handlePrevImage}><img src={leftArrow} alt="prev button" width={60} height={60} /></button>
                             <button className="carousel-btns" onClick={handleNextChange}><img src={rightArrow} alt="next button" width={60} height={60}/></button>
 
