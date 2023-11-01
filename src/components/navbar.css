@@ -4,7 +4,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-header{
+.navbar-header{
     padding: 0rem 4.688rem;
     display: flex;
     flex-direction: column;
