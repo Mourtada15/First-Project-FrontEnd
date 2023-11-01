@@ -7,23 +7,27 @@ import coffee1 from "./assets/pexels-kseniya-budko-8100531.jpg"
 import coffee2 from "./assets/pexels-maksim-goncharenok-4422872.jpg"
 import coffee3 from "./assets/pexels-maksim-goncharenok-4737765.jpg"
 import coffee4 from "./assets/pexels-spotwizardlee-7333831.jpg"
-import coffee5 from "./assets/pexels-kseniya-budko-8100531.jpg"
+import coffee5 from "./assets/pexels-tyler-nix-2396220.jpg"
 
 import "./home.css"
 
 const images =[coffee1,coffee2,coffee3,coffee4,coffee5];
 
 const Home = () =>{
-    const [index,setIndex]= useState(1);
+    const [index,setIndex]= useState(0);
+    const [visible,setVisible]= useState(false);
+    const length=images.length;
+    const handleShowDetails = () =>{
+            setVisible(true);
+    }
+    const handleHideDetails = ()=>{
+        setVisible(false);
+    }
     const handlePrevImage = ()=>{
-        if(index>0){
-        setIndex(index-1);
-        }
+        setIndex((index-1+length) % length);
     }
     const handleNextChange = () =>{
-        if(index<images.length-1){
-            setIndex(index+1);
-        }
+            setIndex((index+1) % length);
     }
     console.log(index);
     return(
@@ -41,10 +45,20 @@ const Home = () =>{
                 </div>
                 <div className="carousel">
                     <div className="carousel-container">
-                    {index!==0?<div className="item1"><img src={images[index-1]} alt="" width={355} height={360}/></div>:<div className="gray-card"></div>} 
-                        <div className="item2"><img src={images[index]} alt="" /></div>
-                       {index!==images.length-1?<div className="item3"><img src={images[index+1]} alt="" width={355} height={360}/></div>:<div className="gray-card"></div>} 
-                        <div className="arrows">
+                    <div className="item1"><img src={images[(index-1+length)%length]} alt="" width={355} height={360}/></div>
+                        <div className="item2" onMouseEnter={handleShowDetails} onMouseLeave={handleHideDetails}>
+                            <img src={images[index]} alt=""  />
+                           {visible? <div className="details">
+                                <h1 className="details-title">
+                                 New Title
+                                </h1>
+                                <p className="description">
+                                some description some description some description some description some description some description some description some description some description
+                                </p>
+                            </div>:null}
+                        </div>
+                       <div className="item3"><img src={images[(index+1)%length]} alt="" width={355} height={360}/></div>
+                        <div className="arrows" onMouseEnter={handleShowDetails}>
                             <button className="carousel-btns" onClick={handlePrevImage}><img src={leftArrow} alt="prev button" width={60} height={60} /></button>
                             <button className="carousel-btns" onClick={handleNextChange}><img src={rightArrow} alt="next button" width={60} height={60}/></button>
 

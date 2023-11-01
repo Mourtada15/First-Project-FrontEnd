@@ -56,6 +56,7 @@ body{
     width: 27.813rem;
     height: 27.813rem;
     box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
+    position: relative;
 }
 .gray-card{
     width: 22.188rem;
@@ -78,4 +79,24 @@ body{
     border: 1px solid #C0202E;
     border-radius: 50%; 
     cursor: pointer;
+}
+.details{
+    position: absolute;
+    background-color: rgba(0,0,0,0.65);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.details-title{
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin: 0.8rem;
+}
+.description{
+    color: white;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    margin: 0.8rem;
 }
