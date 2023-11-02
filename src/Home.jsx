@@ -16,7 +16,7 @@ const images =[coffee1,coffee2,coffee3,coffee4,coffee5];
 const Home = () =>{
     const [index,setIndex]= useState(0);
     const [visible,setVisible]= useState(false);
-    const length=images.length;
+    const length=images.length;//number of images
     const handleShowDetails = () =>{
             setVisible(true);
     }

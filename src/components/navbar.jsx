@@ -8,6 +8,7 @@ import ContactUs from "./contactUs"
 const Navbar = () =>{
     const [showSubscription,setShowSubscription]= useState(false);
     const [showContactUs, setShowContactUs]= useState(false);
+   
 
 
     const handleShowContact = (e) =>{

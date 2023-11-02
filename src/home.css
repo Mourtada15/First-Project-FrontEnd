@@ -13,11 +13,13 @@ body{
 }
 .video-section{
     margin-bottom: 2.188rem;
+    text-align: center;
 }
 .video{
-    width: 106.25rem;
+    max-width: 100%;
+    /* width: 106.25rem;
     max-width: 120rem;
-    height: 53.75rem; 
+    height: 53.75rem;  */
 }
 .carousel-section{
     padding: 0.313rem 0rem;

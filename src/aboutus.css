@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+
+.body-section{
+    padding: 2.188rem 4.688rem;
+    font-family: "Avenir",sans-serif;
+}
+.image-section{
+    margin-bottom: 2.188rem;
+    text-align: center;
+}
+
+.aboutus-image{
+    width:100%;
+    height: 70vh;
+}
+
+.title{
+    border-bottom: 1px solid black;
+}
+
+.title h1{
+    font-size: 2rem;
+    letter-spacing: 0.188rem;
+}
+.red{
+    color: #C0202E;
+}
+
+.story-description, .mission-description, .vision-description{
+    margin:2.188rem 0;
+    text-align: justify;
+    line-height: 2;
+}
