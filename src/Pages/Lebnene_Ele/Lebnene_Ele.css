@@ -1,8 +1,8 @@
 .wrapper {
-    width: 93.2%;
+    width: 100%;
     margin: auto;
+    padding: 0 4.688rem;
     font-family: 'Avenir',Impact,'Arial Narrow Bold', sans-serif;
-    text-transform: uppercase;
     line-height: 2rem;
     text-align: justify;
 }
@@ -13,10 +13,10 @@
 }
 
 .lebneneEle-img {
-    width: 92.5vw;
+    width: 100vw;
     max-width: 100vw;
     height: 70vh;
-    margin-top: 3rem;
+    margin: 2.188rem 4.688rem ;
 }
 
 .lebneneEle-story {
@@ -28,10 +28,68 @@
     padding: 0 0 3rem 0;
 }
 
+.lebneneEle-library {
+    padding: 0 0 3rem 0;
+}
+
+.lebneneEle-article {
+    display: flex;
+    margin: 0;
+    height: 30rem;
+}
+
+.f-article {
+    width: 50%;
+}
+
+.s-article {
+    width: 50%;
+    padding: 8rem;
+}
+
+.article-img {
+    width: 100%;
+    height: 100%;
+}
+
+.article-top {
+    padding-top: 1.5rem;
+}
+
+.read-more {
+    background-color: #C0202E;
+    width: 500px;
+    height: 50px;
+    border-style: unset;
+    border-radius: 30px;
+    color: white;
+    font-size: medium;
+}
+
+.random {
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.btn-read {
+    background-color: #C0202E;
+    width: 180px;
+    height: 40px;
+    border-style: unset;
+    border-radius: 5px;
+    color: white;
+    margin-top: 2rem;
+    font-size: medium;
+}
+
 .lebneneEle-h3 {
     margin-bottom: 0.5rem;
-    color: #056839;
-    border-bottom: 0.5px solid;
+    color: #000000    ;
+    border-bottom: 1px solid #000000;
+}
+
+.h3-red {
+    color: #C0202E;
 }
 
 .lebneneEle-text {
