@@ -7,30 +7,26 @@ const ContactUs = ({onHide}) =>{
     const [userName,setUserName] = useState("");
     const [EmailBackground, setEmailBackground]= useState("white");
     const [UserNameBackground, setUserNameBackground]= useState("white");
+    // const [MessageBackground, setMessageBackground]= useState("white");
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const handleEmailValidation = (e) =>{
-        console.log(e.target.value);
+    const handleEmailInput = (e) =>{
         setEmail(e.target.value);
-        if(emailRegex.test(e.target.value)){
-            setEmailBackground("valid")
-        }
-        else{
-            setEmailBackground("notValid")
-        }
-
-        if(e.target.value==""){
+    }
+    const handleUserNameInput = (e) =>{
+          setUserName(e.target.value);
+    }
+    const handleFormValidation = () =>{
+        if(email =="" || !emailRegex.test(email)){
+            setEmailBackground("notValid");
+        }else{
             setEmailBackground("white")
         }
-    }
-    const handleUserNameValidation = (e) =>{
-          setUserName(e.target.value);
-        if(!e.target.value){
+        if(userName ==""){
             setUserNameBackground("notValid");
         }else{
-            setUserNameBackground("valid");
+            setUserNameBackground("white")
         }
     }
-    
     return(
         <div className="subscribe-popup">
            <header className="popup-header">
@@ -58,14 +54,14 @@ const ContactUs = ({onHide}) =>{
            </header>
            <div className="popup-body">
             <label htmlFor="username">Username</label>
-            <input type="text" value={userName} className={`popup-input ${UserNameBackground} `} placeholder='user name' onChange={handleUserNameValidation} onBlur={handleUserNameValidation} autoFocus/>
+            <input type="text" value={userName} className={`popup-input ${UserNameBackground} `} placeholder='user name' onChange={handleUserNameInput}  autoFocus/>
             <label htmlFor="email">Email</label>
-            <input type="text" value={email} className={`popup-input ${EmailBackground} `} placeholder='Email' onChange={handleEmailValidation}/>
+            <input type="text" value={email} className={`popup-input ${EmailBackground} `} placeholder='Email' onChange={handleEmailInput}/>
             <label htmlFor="message">Message</label>
             <textarea rows={5} className={`popup-textarea `} >
 
             </textarea>
-                <button className="popup-send-btn">Send</button>
+                <button onClick={handleFormValidation}  className="popup-send-btn">Send</button>
            </div>
         </div>
     );

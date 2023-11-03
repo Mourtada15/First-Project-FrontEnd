@@ -5,15 +5,14 @@ const Subscribe = ({onHide}) =>{
     const [email,setEmail]= useState('');
     const [inputBackground, setInputBackground]= useState("white");
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const handleEmailValidation = (e) =>{
+    const handleEmailInput = (e) =>{
         setEmail(e.target.value);
-        if(!e.target.value){
-            setInputBackground("white");
-        }
-        if(emailRegex.test(e.target.value)){
-            setInputBackground("valid")
-        }else{
+    }
+    const handleFormValidation = () =>{
+       if(email =="" || !emailRegex.test(email)){
             setInputBackground("notValid");
+        }else{
+             setInputBackground("white")
         }
     }
     
@@ -40,12 +39,13 @@ const Subscribe = ({onHide}) =>{
     <path d="m6 6 20 20" />
     <path d="m26 6-20 20" /> </svg>
             </button>
-            <h1 className='popup-title'>Join our newsletter</h1>
+            <h1 className='pop
+            up-title'>Join our newsletter</h1>
            </header>
            <div className="popup-body">
             <p className='popup-note'>Enter your email here to join our newsletter</p>
-            <input type="text" value={email} className={`popup-input ${inputBackground} `} placeholder='Email' onChange={handleEmailValidation}/>
-                <button className="popup-send-btn">Send</button>
+            <input type="text" value={email} className={`popup-input ${inputBackground} `} placeholder='Email' onChange={handleEmailInput}/>
+                <button onClick={handleFormValidation} className="popup-send-btn">Send</button>
            </div>
         </div>
     );

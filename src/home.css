@@ -16,10 +16,7 @@ body{
     text-align: center;
 }
 .video{
-    max-width: 100%;
-    /* width: 106.25rem;
-    max-width: 120rem;
-    height: 53.75rem;  */
+  max-width: 100%;
 }
 .carousel-section{
     padding: 0.313rem 0rem;
