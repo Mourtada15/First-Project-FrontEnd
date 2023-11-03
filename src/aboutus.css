@@ -40,3 +40,14 @@ body{
     text-align: justify;
     line-height: 2;
 }
+.teams{
+    margin-top: 2.188rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction:row;
+    text-align: center;
+    gap: 4rem;
+
+}

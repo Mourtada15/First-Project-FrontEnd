@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./components/navbar";
+import Team from "./components/Team";
 import AboutUsImage from "./assets/aboutus.png";
 import "./aboutus.css"
 const AboutUs = () => {
@@ -75,6 +76,13 @@ const AboutUs = () => {
             <h1>
               Meet Our <span className="red">Team</span>
             </h1>
+          </div>
+          <div className="teams">
+            <Team/>
+            <Team/>
+            <Team/>
+            <Team/>
+            <Team/>
           </div>
         </div>
 
