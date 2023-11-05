@@ -45,7 +45,14 @@ const Navbar = () =>{
                 <li><a style={{color:"#C0202E"}} href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">News</a></li>
-                <li><a href="#">Lebnene Ele</a></li>
+                <li className="dropdown">
+                    <a href="#">Lebnene Ele</a>
+                    <div className="dropdown-content">
+                        <a href="#">Our Story</a>
+                        <a href="#">Milestones</a>
+                        <a href="#">From Our Library to Yours</a>
+                    </div>
+                </li>
                 <li><a onClick={handleShowContact} href="#">Contact Us</a></li>
             </ul>
         </div>

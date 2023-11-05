@@ -15,7 +15,7 @@
 .lebneneEle-img {
     width: 100vw;
     max-width: 100vw;
-    object-fit: fill;
+    object-fit: cover;
     height: 70vh;
     margin: 2.188rem 4.688rem ;
 }
@@ -30,7 +30,7 @@
 }
 
 .lebneneEle-library {
-    padding: 0 0 3rem 0;
+    padding: 0 0 1rem 0;
 }
 
 .lebneneEle-article {
@@ -51,28 +51,14 @@
 .article-img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .article-top {
-    padding-top: 1.5rem;
+    padding-top: 1rem;
 }
 
-.read-more {
-    background-color: #C0202E;
-    width: 500px;
-    height: 50px;
-    border-style: unset;
-    border-radius: 30px;
-    color: white;
-    font-size: medium;
-}
-
-.random {
-    text-align: center;
-    padding-top: 4rem;
-}
-
-.btn-read {
+.read-btn {
     background-color: #C0202E;
     width: 180px;
     height: 40px;
@@ -81,10 +67,35 @@
     color: white;
     margin-top: 2rem;
     font-size: medium;
+    transition: background-color 0.3s, color 0.3s;
+}
+.read-btn:hover {
+    background-color: #861620; 
+    cursor: pointer;
+  }
+
+.readmore-btn {
+    background-color: #C0202E;
+    width: 500px;
+    height: 50px;
+    border-style: unset;
+    border-radius: 30px;
+    color: white;
+    font-size: medium;
+    transition: background-color 0.3s, color 0.3s;
+}
+.readmore-btn:hover {
+    background-color: #861620; 
+    cursor: pointer;
+  }
+
+.readmore-div {
+    text-align: center;
+    padding-top: 4rem;
 }
 
 .lebneneEle-h3 {
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
     color: #000000    ;
     border-bottom: 1px solid #000000;
 }
