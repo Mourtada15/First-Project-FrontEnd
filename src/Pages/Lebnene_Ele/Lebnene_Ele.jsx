@@ -30,7 +30,7 @@ const Lebnene_Ele = () => {
                         <article className="lebneneEle-article">
                             
                             <div className="s-article">
-                            <h4>The First Article</h4>
+                            <h4>The Second Article</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo voluptatibus labore quisquam tenetur quod beatae animi tempore, voluptatum, amet veritatis aliquam ea nisi? Illo doloremque quas sint accusantium qui aut?</p>
                             <button className="read-btn">Read full story</button>
                             </div>
