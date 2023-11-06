@@ -25,6 +25,7 @@ body{
 
 .title{
     border-bottom: 1px solid black;
+    text-transform: uppercase;
 }
 
 .title h1{
@@ -42,7 +43,6 @@ body{
 }
 .teams-container{
     display: flex;
-    /* position: relative; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -88,5 +88,4 @@ body{
     background-repeat: no-repeat;
     background-position: center; 
     background-size: 40% auto;
-
 }

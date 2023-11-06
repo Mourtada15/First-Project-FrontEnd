@@ -29,7 +29,7 @@
    color: #C0202E;
    font-family: "Avenir",sans-serif;
    font-weight: bold;
-   font-size: larger;
+   font-size: 2rem;
 }
 
 .member-position{
@@ -37,3 +37,27 @@
     font-size: x-large;
     font-weight: bold;
 }
+
+@media (max-width: 800px) {
+    .teams {
+      width: 100%; /* Expand to full width for smaller screens */
+      margin-top: 1rem; /* Adjust margin as needed */
+      gap: 2rem; /* Adjust gap as needed */
+    }
+  
+    .previous-button,
+    .next-button {
+      width: 4rem; /* Adjust button size for smaller screens */
+      height: 1.25rem; /* Adjust button size for smaller screens */
+    }
+  
+    .team-member {
+      width: 100%; /* Expand to full width for smaller screens */
+      margin-top: 1rem; /* Adjust margin as needed */
+    }
+  
+    .profile-picture {
+      width: 10rem; /* Adjust image size for smaller screens */
+      height: 10rem; /* Adjust image size for smaller screens */
+    }
+  }
