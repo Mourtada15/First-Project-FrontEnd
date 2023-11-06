@@ -2,30 +2,17 @@ import "./News.css";
 import Navbar from "./components/navbar";
 import coffee1 from './assets/pexels-kseniya-budko-8100531.jpg'
 import profile from "./assets/user.png"
+import { Link } from "react-router-dom";
 const News = () =>{
     return (
         <>
         <Navbar/>
         <div className="news">
             <div className="news-posts">
-                <a href="#">
-                    <Post/>
-                </a>
-                <a href="#">
-                    <Post/>
-                </a>
-                <a href="#">
-                    <Post/>
-                </a>
-                <a href="#">
-                    <Post/>
-                </a>
-                <a href="#">
-                    <Post/>
-                </a>
-                <a href="#">
-                    <Post/>
-                </a>
+            <Post/>
+            <Post/>
+            <Post/>
+            <Post/>                
             </div>
 
         </div>
@@ -36,6 +23,7 @@ const News = () =>{
 export const Post = () =>{
     return (
         <>
+        <Link to='/posts/1'>
         <div className="post">
                     
                     <div className="post-image">
@@ -70,6 +58,7 @@ export const Post = () =>{
                         </div>
                     </div>
                 </div>
+                </Link>
         </>
     );
 }

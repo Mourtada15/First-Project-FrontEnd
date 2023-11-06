@@ -51,6 +51,11 @@ body{
     height: 22.5rem;
     opacity: 0.6;
 }
+.item1 img,.item2 img, .item3 img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
 .item2{
     width: 27.813rem;
     height: 27.813rem;
@@ -86,6 +91,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
+    padding: 2rem;
 }
 .details-title{
     font-size: 2rem;

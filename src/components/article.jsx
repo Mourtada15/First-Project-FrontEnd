@@ -1,8 +1,8 @@
-import Navbar from "./navbar";
 import profile from "../assets/user.png"
 import coffee1 from '../assets/pexels-kseniya-budko-8100531.jpg'
 
 import './article.css'
+import Navbar from "./navbar";
 const Article = () =>{
     return(
         <>

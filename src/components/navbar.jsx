@@ -5,6 +5,8 @@ import subscribe from "../assets/subscribe.png"
 import donate from '../assets/heart.png'
 import Subscribe from "./subscribe"
 import ContactUs from "./contactUs"
+import { Link } from "react-router-dom";
+
 const Navbar = () =>{
     const [showSubscription,setShowSubscription]= useState(false);
     const [showContactUs, setShowContactUs]= useState(false);
@@ -42,11 +44,11 @@ const Navbar = () =>{
     <div className="header-section">
         <div className="nav-items">
             <ul>
-                <li><a style={{color:"#C0202E"}} href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Lebnene Ele</a></li>
-                <li><a onClick={handleShowContact} href="#">Contact Us</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="#">About Us</Link></li>
+                <li><Link to="/news">News</Link></li>
+                <li><Link to="#">Lebnene Ele</Link></li>
+                <li><Link onClick={handleShowContact} to="#">Contact Us</Link></li>
             </ul>
         </div>
         <input type="text" placeholder="search..." className="header-search-bar"/>
