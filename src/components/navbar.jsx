@@ -45,7 +45,7 @@ const Navbar = () =>{
         <div className="nav-items">
             <ul>
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="#">About Us</Link></li>
+                <li><Link to="/aboutus">About Us</Link></li>
                 <li><Link to="/news">News</Link></li>
                 <li><Link to="#">Lebnene Ele</Link></li>
                 <li><Link onClick={handleShowContact} to="#">Contact Us</Link></li>

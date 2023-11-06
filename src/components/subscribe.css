@@ -7,12 +7,14 @@
     border-radius: .5rem;
     position: absolute;
     z-index: 5;
-    top: 15.938rem;
-    left: 37.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: "Avenir",sans-serif;
+    position: fixed;
 }
 .popup-header{
     width: 100%;

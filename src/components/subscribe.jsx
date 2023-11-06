@@ -39,8 +39,7 @@ const Subscribe = ({onHide}) =>{
     <path d="m6 6 20 20" />
     <path d="m26 6-20 20" /> </svg>
             </button>
-            <h1 className='pop
-            up-title'>Join our newsletter</h1>
+            <h1 className='popup-title'>Join our newsletter</h1>
            </header>
            <div className="popup-body">
             <p className='popup-note'>Enter your email here to join our newsletter</p>
