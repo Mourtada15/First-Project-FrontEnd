@@ -11,7 +11,7 @@
     gap: 2rem;
 }
 .team-card{
-    border: 0.063rem solid #F0F0F0;
+    border: 0.188rem solid #F0F0F0;
     padding: 1rem 5rem;
     transition: box-shadow 0.3s;
 }
@@ -23,7 +23,6 @@
     height: 12.5rem;
     border-radius: 50%;
     border: 0.625rem solid white ;
-    box-shadow: 0.313rem 0.313rem 0.313rem #D0EFB0;
 }
 
 .member-name{
