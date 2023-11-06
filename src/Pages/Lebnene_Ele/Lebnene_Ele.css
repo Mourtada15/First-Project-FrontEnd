@@ -74,22 +74,23 @@
     cursor: pointer;
   }
 
-.readmore-btn {
+.showmore-btn {
     background-color: #C0202E;
-    width: 500px;
-    height: 50px;
+    width: 200px;
+    height: 40px;
     border-style: unset;
     border-radius: 30px;
     color: white;
     font-size: medium;
     transition: background-color 0.3s, color 0.3s;
 }
-.readmore-btn:hover {
+.showmore-btn:hover {
     background-color: #861620; 
+    color: white;
     cursor: pointer;
   }
 
-.readmore-div {
+.showmore-div {
     text-align: center;
     padding-top: 4rem;
 }
