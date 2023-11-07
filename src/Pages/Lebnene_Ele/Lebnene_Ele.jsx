@@ -1,3 +1,4 @@
+import Slider from "../../components/Slider";
 import Navbar from "../../components/navbar";
 import "../Lebnene_Ele/Lebnene_Ele.css";
 
@@ -18,26 +19,7 @@ const Lebnene_Ele = () => {
                 <section className="lebneneEle-library">
                     <h2 className="lebneneEle-h3">MILE<span className="h3-red">STONES</span></h2>
                 </section>
-                    <div className="article-top">
-                        <article className="lebneneEle-article">
-                            <div className="f-article"><img src="http://picsum.photos/1081" alt="article-image" className="article-img"/></div>
-                            <div className="s-article">
-                            <h4>The First Article</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo voluptatibus labore quisquam tenetur quod beatae animi tempore, voluptatum, amet veritatis aliquam ea nisi? Illo doloremque quas sint accusantium qui aut?</p>
-                            <button className="read-btn">Read full story</button>
-                            </div>
-                        </article>
-                        <article className="lebneneEle-article">
-                            
-                            <div className="s-article">
-                            <h4>The Second Article</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo voluptatibus labore quisquam tenetur quod beatae animi tempore, voluptatum, amet veritatis aliquam ea nisi? Illo doloremque quas sint accusantium qui aut?</p>
-                            <button className="read-btn">Read full story</button>
-                            </div>
-                            <div className="f-article"><img src="http://picsum.photos/1080" alt="article-image" className="article-img"/></div>
-                        </article>
-                        <div className="showmore-div"><button className="showmore-btn">Show More</button></div>
-                    </div>
+                <Slider />
                 <section className="lebneneEle-library">
                     <h2 className="lebneneEle-h3">FROM OUR LIBRARY TO <span className="h3-red">YOURS</span></h2>
                     <p className="lebneneEle-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem enim doloremque aliquid placeat, suscipit laudantium atque illum commodi, eos consequatur distinctio quisquam quos, incidunt consectetur beatae harum fugit debitis molestias.
