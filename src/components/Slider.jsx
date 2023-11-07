@@ -62,7 +62,7 @@ const Slider = () => {
           >
             <div className="slide-image slider-link prev">
               <img src={item.imageSrc} alt="Slide" />
-              <div className="overlay"></div>
+              {/* <div className="overlay"></div> */}
             </div>
             <div className="slide-content">
               <div className="slide-date">{item.date}</div>
@@ -74,8 +74,8 @@ const Slider = () => {
         ))}
       </div>
       <div className="arrows">
-        <button href="#" title="Previous" className="arrow slider-link prev" onClick={handlePrevSlide}>Previous</button>
-        <button href="#" title="Next" className="arrow slider-link next" onClick={handleNextSlide}>Next</button>
+        <button href="#" title="Previous" className="arrow slider-link prev" onClick={handlePrevSlide}></button>
+        <button href="#" title="Next" className="arrow slider-link next" onClick={handleNextSlide}></button>
       </div>
     </div>
   );
