@@ -1,18 +1,16 @@
 import "./News.css";
-import Navbar from "./components/navbar";
-import coffee1 from './assets/pexels-kseniya-budko-8100531.jpg'
 import profile from "./assets/user.png"
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 const News = () =>{
+    const articles = useLoaderData();
     return (
         <>
-        <Navbar/>
         <div className="news">
             <div className="news-posts">
-            <Post/>
-            <Post/>
-            <Post/>
-            <Post/>                
+            {articles.map(ar=>{
+                return <Post key={ar._id} article={ar} months={months}/>
+            })}                
             </div>
 
         </div>
@@ -20,14 +18,16 @@ const News = () =>{
     );
 }
 
-export const Post = () =>{
+// eslint-disable-next-line react/prop-types
+export const Post = ({article}) =>{
+    const date= new Date(article.createdAt);
     return (
         <>
-        <Link to='/posts/1'>
+        <Link to={`posts/${article._id}`}>
         <div className="post">
                     
                     <div className="post-image">
-                        <img src={coffee1} alt="" />
+                        <img src={`https://tpll-31oj.onrender.com/${article.image}`} alt="" />
                     </div>
                     <div className="post-details">
                         <div className="article">
@@ -41,9 +41,9 @@ export const Post = () =>{
                                             Karen
                                         </span>
                                         <ul className="post-metadata--time">
-                                            <li>Sep 12</li>
+                                            <li>{`${months[date.getMonth()]} ${date.getDay()}`}</li>
                                             <li> . </li>
-                                            <li>2 min</li>
+                                            <li>{`${date.getHours()}:r${date.getMinutes()} min`}</li>
 
                                         </ul>
 
@@ -52,8 +52,8 @@ export const Post = () =>{
                                 </div>
                             </div>
                             <div className="post-body">
-                                <h1>This is the first post </h1>
-                                <p>We decided on a farmers market theme for her first birthday because it was super cute, played on the idea of celebrating her growth, and it <span>...read more</span> </p>
+                                <h1>{article.title}</h1>
+                                <p>{article.body.slice(0,300)} <span>...read more</span> </p>
                             </div>
                         </div>
                     </div>

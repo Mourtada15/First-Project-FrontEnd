@@ -2,11 +2,13 @@ import profile from "../assets/user.png"
 import coffee1 from '../assets/pexels-kseniya-budko-8100531.jpg'
 
 import './article.css'
-import Navbar from "./navbar";
+import { useLoaderData } from "react-router-dom"
 const Article = () =>{
+    const {article,recentArticles}= useLoaderData();
+    console.log(article);
+    console.log(recentArticles);
     return(
         <>
-        <Navbar/>
         <main className="post-main">
             <div className="post-details">
                 <article className="post-article">
