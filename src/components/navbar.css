@@ -68,16 +68,12 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(242,242,242,1)
     list-style: none;
     font-weight: 700;
 }
-.nav-items li a, .nav-items li button{
+.nav-items li a{
     color: black;
     text-decoration: none;
-    background-color: transparent;
-    outline: none;
-    border: 0;
-    font-weight: inherit;
 
 }
-.nav-items li a:hover,.nav-items li button:hover{
+.nav-items li a:hover{
     color: #C0202E;
 }
 

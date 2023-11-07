@@ -4,6 +4,7 @@
 .slider {
     /* background-color: #0D1B2B;  */
     overflow-x: hidden; 
+    position: relative;
     font-family: 'Avenir',Impact,'Arial Narrow Bold', sans-serif; 
     -webkit-font-smoothing: antialiased;
     /* margin: 0; */
@@ -31,7 +32,7 @@
     height: 100%;
     cursor: pointer;}
 .slide-content {
-    width: 40vw; 
+    width: 51vw; 
     color: #000000; 
     padding: 4rem 15rem 4rem 3rem;
     /* margin: 0 80px 0 80px; */
@@ -46,7 +47,7 @@
 .slide-title {
     font-size: 1.2vw; 
     font-weight: 400; 
-    letter-spacing: 0.1vw; 
+    letter-spacing: 0.07vw; 
     line-height: 1.55vw; 
     padding-bottom: 1.8vw;
 }
@@ -87,8 +88,8 @@
 
 .hasan-arrows{
     width: 100px;
-    /* top: 55%; */
-    /* right: 52%; */
+    top: 80%;
+    right: 15%;
     /* transform: translate(-50%,-50%); */
     position: absolute;
     /* height: 40px; */
