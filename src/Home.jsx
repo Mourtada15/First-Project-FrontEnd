@@ -10,7 +10,6 @@ const Home = () =>{
     const images =articles.map(a => {
     return`https://tpll-31oj.onrender.com/${a.image}`
     })
-    console.log(images);
     const [index,setIndex]= useState(0);
     const [visible,setVisible]= useState(false);
     const length=images.length;//number of images

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import Home from './Home.jsx'
 import News from './News.jsx'
 import Aboutus from './AboutUs.jsx'
+import LebneneEle from './Pages/Lebnene_Ele/Lebnene_Ele.jsx';
 import { createBrowserRouter,RouterProvider} from 'react-router-dom'
 import axios from 'axios'
 import Article from './components/article.jsx'
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path:'aboutus',
         element: <Aboutus/>
+      },
+      {
+        path:"LebneneELe",
+        element:<LebneneEle/>
       }
     ]
     },

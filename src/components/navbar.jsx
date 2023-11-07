@@ -56,17 +56,17 @@ const Navbar = () =>{
     <div className="header-section">
         <div className="nav-items">
             <ul>
-                <li className={(activeLink==='Home')?'active-link':''}><NavLink onClick={()=> setActiveLink("Home")}  to="Home">Home</NavLink></li>
-                <li className={(activeLink==='AboutUs')?'active-link':''}><NavLink onClick={()=> setActiveLink("AboutUs")} to="aboutus" >About Us</NavLink></li>
-                <li className={(activeLink==='News')?'active-link':''}><NavLink onClick={()=> setActiveLink("News")} to="news" >News</NavLink></li>
-                <li className={`dropdown ${(activeLink==='LebnenEle')?'active-link':''}`}><NavLink onClick={()=> setActiveLink("LebneneEle")} to="#" >Lebnene Ele</NavLink>
+                <li ><NavLink activeClassName="active-link"  to="Home">Home</NavLink></li>
+                <li ><NavLink activeClassName="active-link" to="aboutus" >About Us</NavLink></li>
+                <li ><NavLink activeClassName="active-link" to="news" >News</NavLink></li>
+                <li className={`dropdown`}><NavLink activeClassName="active-link" to="#" >Lebnene Ele</NavLink>
                 <div className="dropdown-content">
                         <a href="#">Our Story</a>
                         <a href="#">Milestones</a>
                         <a href="#">From Our Library to Yours</a>
                     </div>
                     </li>
-                <li className={(activeLink==='ContactUs')?'active-link':''}><NavLink onClick={handleShowContact} to="#" >Contact Us</NavLink></li>
+                <li className={(activeLink==='ContactUs')?'active-link':''}><NavLink activeClassName="active-link" onClick={handleShowContact} to="#" >Contact Us</NavLink></li>
             </ul>
         </div>
         <input type="text" placeholder="search..." className="header-search-bar"/>

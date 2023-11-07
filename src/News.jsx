@@ -43,7 +43,7 @@ export const Post = ({article}) =>{
                                         <ul className="post-metadata--time">
                                             <li>{`${months[date.getMonth()]} ${date.getDay()}`}</li>
                                             <li> . </li>
-                                            <li>{`${date.getHours()}:r${date.getMinutes()} min`}</li>
+                                            <li>{`${date.getHours()}:${date.getMinutes()} min`}</li>
 
                                         </ul>
 
