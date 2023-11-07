@@ -15,6 +15,7 @@ const router = createBrowserRouter([
     children:[
       {
         path:'Home',
+        index:true,
         element:<Home/>,
         loader: async ()=>{
           const response = await axios.get("https://tpll-31oj.onrender.com/api/article/");
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
         },
         children:[
           {
-            path:'posts/:postId',
+            path:'/:postId',
             element:<Article/>,
             loader: async({params})=>{
               const article =await axios.get(`https://tpll-31oj.onrender.com/api/article/${params.postId}`);
