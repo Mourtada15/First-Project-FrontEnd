@@ -56,22 +56,16 @@ const Navbar = () =>{
     <div className="header-section">
         <div className="nav-items">
             <ul>
-                <li><a style={{color:"#C0202E"}} href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">News</a></li>
-                <li className="dropdown">
-                    <a href="#">Lebnene Ele</a>
-                    <div className="dropdown-content">
+                <li className={(activeLink==='Home')?'active-link':''}><Link onClick={()=> setActiveLink("Home")}  to="Home">Home</Link></li>
+                <li className={(activeLink==='AboutUs')?'active-link':''}><Link onClick={()=> setActiveLink("AboutUs")} to="aboutus" >About Us</Link></li>
+                <li className={(activeLink==='News')?'active-link':''}><Link onClick={()=> setActiveLink("News")} to="news" >News</Link></li>
+                <li className={`dropdown${(activeLink==='LebnenEle')?'active-link':''}`}><Link onClick={()=> setActiveLink("LebneneEle")} to="#" >Lebnene Ele</Link>
+                <div className="dropdown-content">
                         <a href="#">Our Story</a>
                         <a href="#">Milestones</a>
                         <a href="#">From Our Library to Yours</a>
                     </div>
-                </li>
-                <li><a onClick={handleShowContact} href="#">Contact Us</a></li>
-                <li className={(activeLink==='Home')?'active-link':''}><Link onClick={()=> setActiveLink("Home")}  to="Home">Home</Link></li>
-                <li className={(activeLink==='AboutUs')?'active-link':''}><Link onClick={()=> setActiveLink("AboutUs")} to="aboutus" >About Us</Link></li>
-                <li className={(activeLink==='News')?'active-link':''}><Link onClick={()=> setActiveLink("News")} to="news" >News</Link></li>
-                <li className={(activeLink==='LebnenEle')?'active-link':''}><Link onClick={()=> setActiveLink("LebneneEle")} to="#" >Lebnene Ele</Link></li>
+                    </li>
                 <li className={(activeLink==='ContactUs')?'active-link':''}><Link onClick={handleShowContact} to="#" >Contact Us</Link></li>
             </ul>
         </div>
