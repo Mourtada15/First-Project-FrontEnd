@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "./components/navbar";
 import Team from "./components/Team";
 import AboutUsImage from "./assets/aboutus.png";
 import "./aboutus.css";
@@ -32,7 +31,6 @@ const AboutUs = () => {
 
   return (
     <>
-      <Navbar />
       <section className="body-section">
         <div className="image-section">
           <img className="aboutus-image" src={AboutUsImage}></img>
