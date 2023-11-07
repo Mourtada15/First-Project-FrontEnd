@@ -61,9 +61,9 @@ const Navbar = () =>{
                 <li className={(activeLink==='News')?'active-link':''}><Link onClick={()=> setActiveLink("News")} to="news" >News</Link></li>
                 <li className={`dropdown${(activeLink==='LebnenEle')?'active-link':''}`}><Link onClick={()=> setActiveLink("LebneneEle")} to="/lebnenele" >Lebnene Ele</Link>
                 <div className="dropdown-content">
-                        <a href="#">Our Story</a>
-                        <a href="#">Milestones</a>
-                        <a href="#">From Our Library to Yours</a>
+                        <a href="#ourStory">Our Story</a>
+                        <a href="#milestones">Milestones</a>
+                        <a href="#library">From Our Library to Yours</a>
                     </div>
                     </li>
                 <li className={(activeLink==='ContactUs')?'active-link':''}><Link onClick={handleShowContact} to="#" >Contact Us</Link></li>
