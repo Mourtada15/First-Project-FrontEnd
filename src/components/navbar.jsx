@@ -15,17 +15,26 @@ const Navbar = () =>{
     const handleShowContact = (e) =>{
         e.preventDefault();
         setShowContactUs(!showContactUs);
+        document.querySelector('.overlay').style.display = 'block';
     }
     const handleHideContact = () =>{
+        document.querySelector('.overlay').style.display = 'none';
         setShowContactUs(false);
     }
 
     const handleShowSubscription = () =>{
         setShowSubscription(!showSubscription);
+        document.querySelector('.overlay').style.display = 'block';
     }
     const handleHideSubscription = () =>{
+        document.querySelector('.overlay').style.display = 'none';
         setShowSubscription(false);
     }
+    const handleCloseOverlay = () => {
+        document.querySelector('.overlay').style.display = 'none';
+        setShowContactUs(false);
+        setShowSubscription(false);
+      }
     return(
 <header className="navbar-header">
     <div className="header-section">
@@ -53,6 +62,7 @@ const Navbar = () =>{
         </div>
         <input type="text" placeholder="search..." className="header-search-bar"/>
     </div>
+    <div className="overlay" onClick={handleCloseOverlay}></div>
     {showSubscription?<Subscribe onHide={handleHideSubscription}/>:null}
     {showContactUs?<ContactUs onHide={handleHideContact}/>:null}
 
