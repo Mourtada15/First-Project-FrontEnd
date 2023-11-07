@@ -31,12 +31,12 @@ const router = createBrowserRouter([
         },
         children:[
           {
-            path:'/:postId',
+            path:'article/:postId',
             element:<Article/>,
             loader: async({params})=>{
               const article =await axios.get(`https://tpll-31oj.onrender.com/api/article/${params.postId}`);
-              const recentArticles= await axios.get("http://localhost:8000/api/article/recent-articles");
-              const response={article:article.data,recentArticles:recentArticles.data};
+              // const recentArticles= await axios.get("http://localhost:8000/api/article/recent-articles");
+              const response={article:article.data};
               return response;
             }
           },
@@ -57,6 +57,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router}/>
   </React.StrictMode>,
-  document.getElementById('root')
 );
 

@@ -23,7 +23,7 @@ export const Post = ({article}) =>{
     const date= new Date(article.createdAt);
     return (
         <>
-        <Link to={`/${article._id}`}>
+        <Link to={`article/${article._id}`}>
         <div className="post">
                     
                     <div className="post-image">

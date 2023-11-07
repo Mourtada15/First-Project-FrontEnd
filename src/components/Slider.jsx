@@ -73,7 +73,7 @@ const Slider = () => {
           </div>
         ))}
       </div>
-      <div className="arrows">
+      <div className="hasan-arrows">
         <button href="#" title="Previous" className="arrow slider-link prev" onClick={handlePrevSlide}></button>
         <button href="#" title="Next" className="arrow slider-link next" onClick={handleNextSlide}></button>
       </div>

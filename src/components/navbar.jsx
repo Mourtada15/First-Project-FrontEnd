@@ -5,7 +5,7 @@ import subscribe from "../assets/subscribe.png"
 import donate from '../assets/heart.png'
 import Subscribe from "./subscribe"
 import ContactUs from "./contactUs"
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () =>{
     const [showSubscription,setShowSubscription]= useState(false);
@@ -56,17 +56,17 @@ const Navbar = () =>{
     <div className="header-section">
         <div className="nav-items">
             <ul>
-                <li className={(activeLink==='Home')?'active-link':''}><Link onClick={()=> setActiveLink("Home")}  to="Home">Home</Link></li>
-                <li className={(activeLink==='AboutUs')?'active-link':''}><Link onClick={()=> setActiveLink("AboutUs")} to="aboutus" >About Us</Link></li>
-                <li className={(activeLink==='News')?'active-link':''}><Link onClick={()=> setActiveLink("News")} to="news" >News</Link></li>
-                <li className={`dropdown${(activeLink==='LebnenEle')?'active-link':''}`}><Link onClick={()=> setActiveLink("LebneneEle")} to="#" >Lebnene Ele</Link>
+                <li className={(activeLink==='Home')?'active-link':''}><NavLink onClick={()=> setActiveLink("Home")}  to="Home">Home</NavLink></li>
+                <li className={(activeLink==='AboutUs')?'active-link':''}><NavLink onClick={()=> setActiveLink("AboutUs")} to="aboutus" >About Us</NavLink></li>
+                <li className={(activeLink==='News')?'active-link':''}><NavLink onClick={()=> setActiveLink("News")} to="news" >News</NavLink></li>
+                <li className={`dropdown ${(activeLink==='LebnenEle')?'active-link':''}`}><NavLink onClick={()=> setActiveLink("LebneneEle")} to="#" >Lebnene Ele</NavLink>
                 <div className="dropdown-content">
                         <a href="#">Our Story</a>
                         <a href="#">Milestones</a>
                         <a href="#">From Our Library to Yours</a>
                     </div>
                     </li>
-                <li className={(activeLink==='ContactUs')?'active-link':''}><Link onClick={handleShowContact} to="#" >Contact Us</Link></li>
+                <li className={(activeLink==='ContactUs')?'active-link':''}><NavLink onClick={handleShowContact} to="#" >Contact Us</NavLink></li>
             </ul>
         </div>
         <input type="text" placeholder="search..." className="header-search-bar"/>

@@ -4,9 +4,9 @@ import coffee1 from '../assets/pexels-kseniya-budko-8100531.jpg'
 import './article.css'
 import { useLoaderData } from "react-router-dom"
 const Article = () =>{
-    const {article,recentArticles}= useLoaderData();
+    const {article}= useLoaderData();
     console.log(article);
-    console.log(recentArticles);
+    // console.log(recentArticles);
     return(
         <>
         <main className="post-main">
