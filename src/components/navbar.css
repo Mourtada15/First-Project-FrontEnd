@@ -68,16 +68,19 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(242,242,242,1)
     list-style: none;
     font-weight: 700;
 }
-.nav-items li a{
+.nav-items li a, .nav-items li button{
     color: black;
     text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    font-weight: inherit;
+
 }
-.nav-items li a:hover{
+.nav-items li a:hover,.nav-items li button:hover{
     color: #C0202E;
 }
-.nav-items li a:focus{
-    color: #C0202E;
-}
+
 .header-search-bar{
     width: 17.5rem;
     height: 2.5rem;
@@ -85,7 +88,6 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(242,242,242,1)
     outline: none;
     border: 1px solid #D9D9D9;
 }
-
 .overlay {
     position: fixed;
     top: 0;
@@ -95,3 +97,6 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(242,242,242,1)
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
     display: none; /* Initially hidden */
   }
+.active-link{
+    color: #C0202E;
+}

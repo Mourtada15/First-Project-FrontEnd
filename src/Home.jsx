@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Navbar from "./components/navbar";
 import leftArrow from './assets/left-arrow.png'
 import rightArrow from './assets/right-arrow.png'
 import introVideo from"./assets/intro.mp4"
@@ -29,7 +28,6 @@ const Home = () =>{
     }
     return(
         <>
-        <Navbar/>
         <section className="body-section">
             <div className="video-section">
                 <video className="video" autoPlay loop muted controls preload="auto">

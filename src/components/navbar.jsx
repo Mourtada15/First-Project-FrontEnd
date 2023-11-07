@@ -10,16 +10,19 @@ import { Link } from "react-router-dom";
 const Navbar = () =>{
     const [showSubscription,setShowSubscription]= useState(false);
     const [showContactUs, setShowContactUs]= useState(false);
-
+    const [activeLink,setActiveLink]= useState(null);
+    console.log(activeLink);
 
     const handleShowContact = (e) =>{
         e.preventDefault();
         setShowContactUs(!showContactUs);
         document.querySelector('.overlay').style.display = 'block';
+        setActiveLink("ContactUs")
     }
     const handleHideContact = () =>{
         document.querySelector('.overlay').style.display = 'none';
         setShowContactUs(false);
+        setActiveLink('');
     }
 
     const handleShowSubscription = () =>{
@@ -53,11 +56,11 @@ const Navbar = () =>{
     <div className="header-section">
         <div className="nav-items">
             <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/aboutus">About Us</Link></li>
-                <li><Link to="/news">News</Link></li>
-                <li><Link to="#">Lebnene Ele</Link></li>
-                <li><Link onClick={handleShowContact} to="#">Contact Us</Link></li>
+                <li className={(activeLink==='Home')?'active-link':''}><Link onClick={()=> setActiveLink("Home")}  to="Home">Home</Link></li>
+                <li className={(activeLink==='AboutUs')?'active-link':''}><Link onClick={()=> setActiveLink("AboutUs")} to="aboutus" >About Us</Link></li>
+                <li className={(activeLink==='News')?'active-link':''}><Link onClick={()=> setActiveLink("News")} to="news" >News</Link></li>
+                <li className={(activeLink==='LebnenEle')?'active-link':''}><Link onClick={()=> setActiveLink("LebneneEle")} to="#" >Lebnene Ele</Link></li>
+                <li className={(activeLink==='ContactUs')?'active-link':''}><Link onClick={handleShowContact} to="#" >Contact Us</Link></li>
             </ul>
         </div>
         <input type="text" placeholder="search..." className="header-search-bar"/>
