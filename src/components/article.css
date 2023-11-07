@@ -172,6 +172,7 @@ overflow: hidden;
 overflow: hidden;
 text-overflow: ellipsis;
 }
+
 .post-footer-flex ul>li a{
     text-decoration: none;
     color: rgb(44,44,43);
