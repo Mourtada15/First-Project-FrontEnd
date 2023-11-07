@@ -8,16 +8,21 @@ import PP3 from '../src/assets/pp3.jpg';
 import PP4 from '../src/assets/pp4.png';
 
 const AboutUs = () => {
-
-  const images=[PP1, PP2, PP3, PP4];
+  const names=['Jihad Abdulghani', 'Nancy Rahhal','Hassan Mourtada', 'Member Name'];
+  const teamInfo=[
+    {image: PP1, name: names[0]}, 
+    {image: PP2, name: names[1]},
+    {image: PP3, name: names[2]},
+    {image: PP4, name: names[3]}];
+  
   const teamsPerPage=2;
-  const totalTeams=images.length;
+  const totalTeams=teamInfo.length;
 
   const [currentPage,setCurrentPage]=useState(0);
 
   const startTeam= currentPage*teamsPerPage;
   const endTeam= startTeam+teamsPerPage;
-  const visibleTeams=images.slice(startTeam,endTeam);
+  const visibleTeams=teamInfo.slice(startTeam,endTeam);
 
   const handleNextPage = () => {
     setCurrentPage((prevPage) => (prevPage + 1) % (totalTeams / teamsPerPage));
@@ -147,8 +152,8 @@ const AboutUs = () => {
           <div className="teams-container">
           <div className="teams">
     
-          {visibleTeams.map((image, index) => (
-                <Team key={index} image={image} />
+          {visibleTeams.map((teamInfo,index) => (
+                <Team key={index} image={teamInfo.image} name={teamInfo.name} />
               ))}
           </div>
           <div className="carousel-buttons">
