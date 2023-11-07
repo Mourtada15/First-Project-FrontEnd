@@ -7,7 +7,7 @@ import { createBrowserRouter,RouterProvider} from 'react-router-dom'
 import axios from 'axios'
 import Article from './components/article.jsx'
 import App from './App.jsx'
-import Lebnenele from '/home/nancy/First-Project-FrontEnd/src/Pages/Lebnene_Ele/Lebnene_Ele.jsx'
+import Lebnenele from '/src/Pages/Lebnene_Ele/Lebnene_Ele.jsx'
 
 const router = createBrowserRouter([
   {
