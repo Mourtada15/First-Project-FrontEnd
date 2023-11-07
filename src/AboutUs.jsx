@@ -6,7 +6,6 @@ import PP1 from '../src/assets/pp1.jpg';
 import PP2 from '../src/assets/pp2.jpg';
 import PP3 from '../src/assets/pp3.jpg';
 import PP4 from '../src/assets/pp4.png';
-import Footer from "./components/footer";
 
 const AboutUs = () => {
 
@@ -160,7 +159,7 @@ const AboutUs = () => {
         </div>
 
       </section>
-      <Footer/>
+    
     </>
   );
 };

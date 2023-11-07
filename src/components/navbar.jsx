@@ -59,7 +59,7 @@ const Navbar = () =>{
                 <li className={(activeLink==='Home')?'active-link':''}><Link onClick={()=> setActiveLink("Home")}  to="Home">Home</Link></li>
                 <li className={(activeLink==='AboutUs')?'active-link':''}><Link onClick={()=> setActiveLink("AboutUs")} to="aboutus" >About Us</Link></li>
                 <li className={(activeLink==='News')?'active-link':''}><Link onClick={()=> setActiveLink("News")} to="news" >News</Link></li>
-                <li className={`dropdown${(activeLink==='LebnenEle')?'active-link':''}`}><Link onClick={()=> setActiveLink("LebneneEle")} to="#" >Lebnene Ele</Link>
+                <li className={`dropdown${(activeLink==='LebnenEle')?'active-link':''}`}><Link onClick={()=> setActiveLink("LebneneEle")} to="/lebnenele" >Lebnene Ele</Link>
                 <div className="dropdown-content">
                         <a href="#">Our Story</a>
                         <a href="#">Milestones</a>

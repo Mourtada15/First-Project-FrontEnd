@@ -1,12 +1,10 @@
 import Slider from "../../components/Slider";
-import Navbar from "../../components/navbar";
 import "../Lebnene_Ele/Lebnene_Ele.css";
 
 const Lebnene_Ele = () => {
 
     return (
         <>
-            <Navbar />
             <div className="lebneneEle-img-center"><img src="http://picsum.photos/1387/1050" alt="LebneneEle" className="lebneneEle-img"/></div>
             <div className="wrapper">
                 <section className="lebneneEle-story">
