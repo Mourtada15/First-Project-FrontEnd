@@ -1,0 +1,18 @@
+footer{
+    background-color: #f0f0f0;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2.188rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* position: fixed;
+    bottom: 0;
+    left:0;
+    right: 0; */
+    /* overflow: hidden; */
+}
+.footer-inner-div{
+    
+    width:fit-content;
+}

@@ -5,27 +5,39 @@ import subscribe from "../assets/subscribe.png"
 import donate from '../assets/heart.png'
 import Subscribe from "./subscribe"
 import ContactUs from "./contactUs"
-import AboutUs from "../AboutUs.jsx"
+import { Link } from "react-router-dom";
+
 const Navbar = () =>{
     const [showSubscription,setShowSubscription]= useState(false);
     const [showContactUs, setShowContactUs]= useState(false);
-   
-
+    const [activeLink,setActiveLink]= useState(null);
+    console.log(activeLink);
 
     const handleShowContact = (e) =>{
         e.preventDefault();
         setShowContactUs(!showContactUs);
+        document.querySelector('.overlay').style.display = 'block';
+        setActiveLink("ContactUs")
     }
     const handleHideContact = () =>{
+        document.querySelector('.overlay').style.display = 'none';
         setShowContactUs(false);
+        setActiveLink('');
     }
 
     const handleShowSubscription = () =>{
         setShowSubscription(!showSubscription);
+        document.querySelector('.overlay').style.display = 'block';
     }
     const handleHideSubscription = () =>{
+        document.querySelector('.overlay').style.display = 'none';
         setShowSubscription(false);
     }
+    const handleCloseOverlay = () => {
+        document.querySelector('.overlay').style.display = 'none';
+        setShowContactUs(false);
+        setShowSubscription(false);
+      }
     return(
 <header className="navbar-header">
     <div className="header-section">
@@ -56,10 +68,16 @@ const Navbar = () =>{
                     </div>
                 </li>
                 <li><a onClick={handleShowContact} href="#">Contact Us</a></li>
+                <li className={(activeLink==='Home')?'active-link':''}><Link onClick={()=> setActiveLink("Home")}  to="Home">Home</Link></li>
+                <li className={(activeLink==='AboutUs')?'active-link':''}><Link onClick={()=> setActiveLink("AboutUs")} to="aboutus" >About Us</Link></li>
+                <li className={(activeLink==='News')?'active-link':''}><Link onClick={()=> setActiveLink("News")} to="news" >News</Link></li>
+                <li className={(activeLink==='LebnenEle')?'active-link':''}><Link onClick={()=> setActiveLink("LebneneEle")} to="#" >Lebnene Ele</Link></li>
+                <li className={(activeLink==='ContactUs')?'active-link':''}><Link onClick={handleShowContact} to="#" >Contact Us</Link></li>
             </ul>
         </div>
         <input type="text" placeholder="search..." className="header-search-bar"/>
     </div>
+    <div className="overlay" onClick={handleCloseOverlay}></div>
     {showSubscription?<Subscribe onHide={handleHideSubscription}/>:null}
     {showContactUs?<ContactUs onHide={handleHideContact}/>:null}
 
