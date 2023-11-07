@@ -1,0 +1,63 @@
+@import "../fonts/fonts.css";
+
+
+.team-member{
+    margin-top: 2.188rem;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.team-card{
+    border: 0.188rem solid #F0F0F0;
+    padding: 1rem 5rem;
+    transition: box-shadow 0.3s;
+}
+.team-card:hover{
+    box-shadow: 0.313rem 0.313rem 0.625rem #D0EFB0;
+}
+.profile-picture{
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 50%;
+    border: 0.625rem solid white ;
+}
+
+.member-name{
+   color: #C0202E;
+   font-family: "Avenir",sans-serif;
+   font-weight: bold;
+   font-size: 2rem;
+}
+
+.member-position{
+    color:#056839;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .teams {
+      width: 100%; /* Expand to full width for smaller screens */
+      margin-top: 1rem; /* Adjust margin as needed */
+      gap: 2rem; /* Adjust gap as needed */
+    }
+  
+    .previous-button,
+    .next-button {
+      width: 4rem; /* Adjust button size for smaller screens */
+      height: 1.25rem; /* Adjust button size for smaller screens */
+    }
+  
+    .team-member {
+      width: 100%; /* Expand to full width for smaller screens */
+      margin-top: 1rem; /* Adjust margin as needed */
+    }
+  
+    .profile-picture {
+      width: 10rem; /* Adjust image size for smaller screens */
+      height: 10rem; /* Adjust image size for smaller screens */
+    }
+  }

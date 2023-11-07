@@ -6,9 +6,7 @@ import Subscribe from "./components/subscribe";
 const App = () =>{
     return(
         <>
-        <Navbar/>
-        <Lebnene_Ele />
-        <Subscribe/>
+      
         </>
     );
 }

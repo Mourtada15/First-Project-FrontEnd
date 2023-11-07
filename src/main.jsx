@@ -7,6 +7,9 @@ import Lebnene_Ele from './Pages/Lebnene_Ele/Lebnene_Ele.jsx'
 
 ReactDOM.render(
   <React.StrictMode>
+   
+    <AboutUs/>
+    {/* <Home /> */}
     <Lebnene_Ele />
   </React.StrictMode>,
   document.getElementById('root')

@@ -5,9 +5,11 @@ import subscribe from "../assets/subscribe.png"
 import donate from '../assets/heart.png'
 import Subscribe from "./subscribe"
 import ContactUs from "./contactUs"
+import AboutUs from "../AboutUs.jsx"
 const Navbar = () =>{
     const [showSubscription,setShowSubscription]= useState(false);
     const [showContactUs, setShowContactUs]= useState(false);
+   
 
 
     const handleShowContact = (e) =>{
