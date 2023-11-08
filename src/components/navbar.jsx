@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Navbar = () =>{
     const [showSubscription,setShowSubscription]= useState(false);
     const [showContactUs, setShowContactUs]= useState(false);
-    const [activeLink,setActiveLink]= useState("");
+    const [activeLink,setActiveLink]= useState("Home");
     console.log(activeLink);
 
     const handleShowContact = (e) =>{

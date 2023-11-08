@@ -6,8 +6,6 @@ import { useLoaderData } from "react-router-dom";
 
 const AboutUs = () => {
 const {aboutusData,teamsData}=useLoaderData();
-console.log(aboutusData);
-console.log(teamsData);
   
   const teamsPerPage=2;
   const totalTeams=teamsData.length;
