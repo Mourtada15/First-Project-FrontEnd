@@ -46,7 +46,10 @@ const router = createBrowserRouter([
       
       {
         path:'aboutus',
-        element: <Aboutus/>
+        element: <Aboutus/>,
+        // loader: async()=>{
+        //   const aboutus=await axios.get('')
+        // }
       },
       {
         path:'lebnenele',
