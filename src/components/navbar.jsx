@@ -39,7 +39,7 @@ const Navbar = () =>{
     return(
 <header className="navbar-header">
     <div className="header-section">
-        <img src={logo} alt="logo-TPLL" className="header-logo"/>
+        <Link onClick={()=> setActiveLink("Home")} className={(activeLink=='Home')?'active-link':''} to="Home"><img src={logo} alt="logo-TPLL" className="header-logo"/></Link>
         <div className="header-btns">
             <button onClick={handleShowSubscription} className="header-subscribe-btn place-items-center">
                 <img src={subscribe} alt="subscribe to newsletter" />
