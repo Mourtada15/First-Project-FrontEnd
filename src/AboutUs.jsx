@@ -1,23 +1,13 @@
 import React, { useState } from "react";
 import Team from "./components/Team";
 import "./aboutus.css";
-import PP1 from '../src/assets/pp1.jpg';
-import PP2 from '../src/assets/pp2.jpg';
-import PP3 from '../src/assets/pp3.jpg';
-import PP4 from '../src/assets/pp4.png';
+
 import { useLoaderData } from "react-router-dom";
 
 const AboutUs = () => {
 const {aboutusData,teamsData}=useLoaderData();
 console.log(aboutusData);
 console.log(teamsData);
-
-  const names=['Jihad Abdulghani', 'Nancy Rahhal','Hassan Mourtada', 'Member Name'];
-  const teamInfo=[
-    {image: PP1, name: names[0]}, 
-    {image: PP2, name: names[1]},
-    {image: PP3, name: names[2]},
-    {image: PP4, name: names[3]}];
   
   const teamsPerPage=2;
   const totalTeams=teamsData.length;
@@ -90,8 +80,8 @@ console.log(teamsData);
           <div className="teams-container">
           <div className="teams">
     
-          {visibleTeams.map((teamsData,index) => (
-                <Team key={teamsData.id} image={teamsData.image} name={teamsData.name} title={teamsData.title} />
+          {visibleTeams.map((team) => (
+                <Team key={team._id} image={team.image} name={team.name} title={team.title} />
               ))}
           </div>
           <div className="carousel-buttons">
