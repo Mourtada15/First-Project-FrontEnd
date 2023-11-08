@@ -106,7 +106,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(242,242,242,1)
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
     border-radius: 0.438rem;
-    margin-top: 0.625rem;
+    /* margin-top: 0.625rem; */
 }
 
 .dropdown:hover .dropdown-content {
@@ -123,4 +123,5 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(242,242,242,1)
 
 .dropdown-content a:hover {
     background-color: #ddd;
+    display: block;
 }
