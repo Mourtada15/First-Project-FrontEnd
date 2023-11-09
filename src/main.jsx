@@ -8,6 +8,7 @@ import axios from 'axios'
 import Article from './components/article.jsx'
 import App from './App.jsx'
 import Lebnenele from '/src/Pages/Lebnene_Ele/Lebnene_Ele.jsx'
+import Slider from './components/Slider.jsx'
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,6 @@ const router = createBrowserRouter([
             element:<Article/>,
             loader: async({params})=>{
               const article =await axios.get(`https://tpll-31oj.onrender.com/api/article/${params.postId}`);
-              // const recentArticles= await axios.get("http://localhost:8000/api/article/recent-articles");
               const response={article:article.data};
               return response;
             }
@@ -50,12 +50,15 @@ const router = createBrowserRouter([
       },
       {
         path:'lebnenele',
-        element: <Lebnenele/>
-      }
+        element: <Lebnenele />,
+        loader: async () => {
+          const lebneneEle = await axios.get('http://localhost:5000/api/lebneneEle/')
+          const milestones= await axios.get('http://localhost:5000/api/milestone/')
+          return {lebneneleData: lebneneEle.data, milestonesData: milestones.data};
+        }
+      },
     ]
-    },
-    
-    
+    }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

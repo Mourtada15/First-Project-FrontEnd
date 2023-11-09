@@ -1,8 +1,9 @@
 import profile from "../assets/user.png"
 import coffee1 from '../assets/pexels-kseniya-budko-8100531.jpg'
-
 import './article.css'
 import { useLoaderData } from "react-router-dom"
+
+
 const Article = () =>{
     const {article}= useLoaderData();
     console.log(article);

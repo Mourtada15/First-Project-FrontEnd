@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 .slider {
     overflow-x: hidden; 
@@ -17,7 +15,6 @@
     flex-direction: row; 
     justify-content: center;
 }
-
 .slider-wrapper {
     position: relative;
     margin: 0 0 0 12vw;
@@ -57,29 +54,6 @@
     float: left; 
     font-size: 0.9vw;
 }
-/* .slide-bullet {
-    width: 0.5vw; 
-    height: 0.5vw; 
-    background-color: #0b8bcc; 
-    border-radius: 200%; 
-    position: relative; 
-    margin-left: 1.2vw;
-} */
-/* .slide-nav {
-    margin-left: 64vw; 
-    margin-top: -5.5vw;
-} */
-
-/* div.overlay-blue {
-    width: 100%; 
-    height: 100%; 
-    position: absolute; 
-    top: 0; 
-    transition: 0.5s ease all;} */
-/* div.overlay-blue:hover {
-    background-color: rgba(13, 27, 43, 0.5);
-} */
-
 .hasan-arrows{
     width: 80px;
     top: 80%; 
@@ -100,7 +74,6 @@
     color: transparent;
 }
 .arrow:hover {
-    /* border-color: #C0202E;  */
     border-right: 8px solid #C0202E;
     border-left: unset;
     border-top: unset;
@@ -117,6 +90,5 @@
     content: ""; 
     transform: rotate(45deg);
 }
-
 .arrow.prev {transform: rotate(135deg); left: 0;}
 .arrow.next {transform: rotate(-45deg); right: 0;}

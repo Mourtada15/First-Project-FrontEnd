@@ -2,43 +2,19 @@ import React, { useState } from 'react';
 import { TweenLite } from 'gsap';
 import './Slider.css';
 
-const Slider = () => {
-  const sliderItems = [
-    {
-      date: '30.07.2017',
-      title: 'LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT',
-      text: 'Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex.',
-      imageSrc: 'https://goranvrban.com/codepen/img2.jpg',
-    },
-    {
-      date: '30.08.2017',
-      title: 'LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT',
-      text: 'Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex.',
-      imageSrc: 'https://goranvrban.com/codepen/img3.jpg',
-    },
-    {
-      date: '30.09.2017',
-      title: 'LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT',
-      text: 'Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex.',
-      imageSrc: 'https://goranvrban.com/codepen/img5.jpg',
-    },
-    {
-      date: '30.10.2017',
-      title: 'LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT',
-      text: 'Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex.',
-      imageSrc: 'https://goranvrban.com/codepen/img6.jpg',
-    },
-  ];
 
+const Slider = ({milestonesData}) => {
+  
+console.log(milestonesData)
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNextSlide = () => {
-    const nextIndex = (currentIndex + 1) % sliderItems.length;
+    const nextIndex = (currentIndex + 1) % milestonesData.length;
     transitionToSlide(nextIndex);
   };
 
   const handlePrevSlide = () => {
-    const prevIndex = (currentIndex - 1 + sliderItems.length) % sliderItems.length;
+    const prevIndex = (currentIndex - 1 + milestonesData.length) % milestonesData.length;
     transitionToSlide(prevIndex);
   };
 
@@ -55,19 +31,18 @@ const Slider = () => {
   return (
     <div className="slider">
       <div className="slider-wrapper flex">
-        {sliderItems.map((item, index) => (
+        {milestonesData.map((item, index) => (
           <div
-            key={index}
+            key={item._id}
             className={`slide flex ${index === currentIndex ? 'active' : ''}`}
           >
             <div className="slide-image slider-link prev">
-              <img src={item.imageSrc} alt="Slide" />
-              {/* <div className="overlay"></div> */}
+              <img src={`http://localhost:5000/${item.image}`} alt="Slide" />
             </div>
             <div className="slide-content">
-              <div className="slide-date">{item.date}</div>
+              <div className="slide-date">{`${new Date(item.createdAt).getDay()}.${new Date(item.createdAt).getMonth()}.${new Date(item.createdAt).getFullYear()}`}</div>
               <div className="slide-title">{item.title}</div>
-              <div className="slide-text">{item.text}</div>
+              <div className="slide-text">{item.body.slice(0,300)}</div>
               <div className="slide-more">READ MORE</div>
             </div>
           </div>
