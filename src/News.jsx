@@ -5,16 +5,15 @@ const months = ["January", "February", "March", "April", "May", "June", "July", 
 const News = () =>{
     const articles = useLoaderData();
     return (
-        <>
         <div className="news">
             <div className="news-posts">
             {articles.map(ar=>{
-                return <Post key={ar._id} article={ar} months={months}/>
+                return <Link key={ar._id} to={`${ar._id}`}> <Post  article={ar} months={months}/></Link>
             })}                
             </div>
 
         </div>
-        </>
+        
     );
 }
 
@@ -23,7 +22,7 @@ export const Post = ({article}) =>{
     const date= new Date(article.createdAt);
     return (
         <>
-        <Link to={`article/${article._id}`}>
+        
         <div className="post">
                     
                     <div className="post-image">
@@ -58,7 +57,6 @@ export const Post = ({article}) =>{
                         </div>
                     </div>
                 </div>
-                </Link>
         </>
     );
 }

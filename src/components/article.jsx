@@ -1,12 +1,13 @@
 import profile from "../assets/user.png"
 import coffee1 from '../assets/pexels-kseniya-budko-8100531.jpg'
 import './article.css'
-import { useLoaderData } from "react-router-dom"
-
-
+import { Link, useLoaderData } from "react-router-dom"
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 const Article = () =>{
-    const {article}= useLoaderData();
+    const {article,articles}= useLoaderData();
+    const date=new Date(article.createdAt);
     console.log(article);
+    console.log(articles);
     // console.log(recentArticles);
     return(
         <>
@@ -29,24 +30,24 @@ const Article = () =>{
                                     </span>
                                     </li>
                                 <li><span>.</span></li>
-                                <li><span>March 9, 2022</span></li>
+                                <li><span>{`${months[date.getMonth()]} ${date.getDay()}, ${date.getFullYear()}`}</span></li>
                                 <li><span>.</span></li>
-                                <li><span>4 min</span></li>
+                                <li><span>{`${date.getHours()}:${date.getMinutes()}`}</span></li>
                             </ul>
-                            <h1 className="post-metadata-title">This is the first Post</h1>
+                            <h1 className="post-metadata-title">{`${article.title}`}</h1>
                         </div>
                         <div className="article-body">
                             <div className="article-body-img">
-                            <img src={coffee1} alt="" />
+                            <img src={`https://tpll-31oj.onrender.com/${article.image}`} alt="" />
                             </div>
                             <br className="sep-line" />
                             <div>
                                 <p>
-                                As an interior designer, I love the idea of creating a backdrop that suits my client's needs and sourcing every last detail on a deadline to create that grand reveal. But when it comes to designing for myself, taking time to live with the home often makes things better. We are constantly evolving, and as we change so do our needs and tastes. While the rest of our home is primarily light and airy, I was craving a cocoon-like space where we could snuggle cozily. The more I thought about it, the more I warmed up to the idea of a rich brown grasscloth wall covering to swathe the walls in. Although the room is small, it is not enclosed on all sides and has 10 foot ceilings which keeps it feeling spacious. And so, the layering began...
+                                {`${article.body.slice(0,(article.body.length/2))}`}
                                 </p>
                             <br className="sep-line" />
 
-                                <p>As an interior designer, I love the idea of creating a backdrop that suits my client's needs and sourcing every last detail on a deadline to create that grand reveal. But when it comes to designing for myself, taking time to live with the home often makes things better. We are constantly evolving, and as we change so do our needs and tastes. While the rest of our home is primarily light and airy, I was craving a cocoon-like space where we could snuggle cozily. The more I thought about it, the more I warmed up to the idea of a rich brown grasscloth wall covering to swathe the walls in. Although the room is small, it is not enclosed on all sides and has 10 foot ceilings which keeps it feeling spacious. And so, the layering began...</p>
+                                <p>{`${article.body.slice((article.body.length/2),article.body.length)}`}</p>
                             </div>
                         </div>
                         <div className="post-footer">
@@ -72,67 +73,31 @@ const Article = () =>{
                 <div className="recent-posts">
                     <div className="recent-posts--header">
                         <h2>Recent Posts</h2>
-                        <a href="#">See All</a>
+                        <a href="#"><Link to={'/news'}>See All</Link></a>
                     </div>
                     <div className="recent-posts--list">
-                        <a href="#">
-                        <div className="post-card">
+                        {articles.map(each=>{
+                            return <Link key={each._id} to={`/news/${each._id}`}>
+                                 <div className="post-card">
                             <article>
                                 <div className="card-img">
-                                <img src={coffee1} alt="" />
+                                <img src={`https://tpll-31oj.onrender.com/${each.image}`} alt="" />
                                 </div>
                                 <div className="post-card--body">
-                                    <h3>A Recent Post</h3>
+                                    <h3>{`${each.title}`}</h3>
                             <div className="line-separator"></div>
                             <div className="recent-post--description">
                             <p className="">
-                            As an interior designer, I love the idea of creating a backdrop
+                            {`${each.body.slice(0,120)}`}
                             </p>
                             </div>  
                                 </div>
 
                             </article>
                         </div>
-                        </a>
-                        <a href="#">
-                        <div className="post-card">
-                            <article>
-                                <div className="card-img">
-                                <img src={coffee1} alt="" />
-                                </div>
-                                <div className="post-card--body">
-                                    <h3>A Recent Post</h3>
-                            <div className="line-separator"></div>
-                            <div className="recent-post--description">
-                            <p className="">
-                            As an interior designer, I love the idea of creating a backdrop
-                            </p>
-                            </div>  
-                                </div>
-
-                            </article>
-                        </div>
-                        </a>
-                        <a href="#">
-                        <div className="post-card">
-                            <article>
-                                <div className="card-img">
-                                <img src={coffee1} alt="" />
-                                </div>
-                                <div className="post-card--body">
-                                    <h3>A Recent Post</h3>
-                            <div className="line-separator"></div>
-                            <div className="recent-post--description">
-                            <p className="">
-                            As an interior designer, I love the idea of creating a backdrop
-                            </p>
-                            </div>  
-                                </div>
-
-                            </article>
-                        </div>
-                        </a>
-
+                            </Link>
+                        })}
+                       
                     </div>
 
                 </div>
