@@ -57,7 +57,7 @@
     }
   
     .profile-picture {
-      width: 10rem; /* Adjust image size for smaller screens */
-      height: 10rem; /* Adjust image size for smaller screens */
+      width: 10rem; 
+      height: 10rem;
     }
   }

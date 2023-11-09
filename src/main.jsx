@@ -49,8 +49,8 @@ const router = createBrowserRouter([
         element: <Aboutus/>,
         loader: async()=>{
           // console.log('fetching about us')
-          const aboutus=await axios.get('http://localhost:4000/api/about-us')
-          const teams= await axios.get('http://localhost:4000/api/team')
+          const aboutus=await axios.get('https://tpll-31oj.onrender.com/api/about-us/')
+          const teams= await axios.get('https://tpll-31oj.onrender.com/api/team/')
           return {aboutusData: aboutus.data, teamsData: teams.data}
         }
       },
