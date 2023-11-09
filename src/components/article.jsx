@@ -73,7 +73,7 @@ const Article = () =>{
                 <div className="recent-posts">
                     <div className="recent-posts--header">
                         <h2>Recent Posts</h2>
-                        <a href="#"><Link to={'/news'}>See All</Link></a>
+                        <Link to={'/news'}>See All</Link>
                     </div>
                     <div className="recent-posts--list">
                         {articles.map(each=>{
