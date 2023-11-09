@@ -73,7 +73,7 @@ const router = createBrowserRouter([
           path:'News',
           element:<AdminArticles/>,
           loader: async ()=>{
-            const response =await axios.get("http://localhost:8000/api/article/");
+            const response =await axios.get("http://localhost:4000/api/article/");
             return response.data;
           } ,
           
@@ -81,7 +81,7 @@ const router = createBrowserRouter([
         {
           path:'News/delete/:id',
           action:async ({params})=>{
-            await axios.delete(`http://localhost:8000/api/article/${params.id}`);
+            await axios.delete(`http://localhost:4000/api/article/${params.id}`);
              return redirect("/admin/dashboard/News");
           }
         }  
@@ -96,6 +96,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router}/>
   </React.StrictMode>,
-);
+);binary
 
 
