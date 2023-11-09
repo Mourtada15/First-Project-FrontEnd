@@ -8,6 +8,7 @@ import axios from 'axios'
 import Article from './components/article.jsx'
 import App from './App.jsx'
 import Lebnenele from '/src/Pages/Lebnene_Ele/Lebnene_Ele.jsx'
+import Team from './components/Team.jsx'
 import Slider from './components/Slider.jsx'
 
 const router = createBrowserRouter([
@@ -46,7 +47,13 @@ const router = createBrowserRouter([
       
       {
         path:'aboutus',
-        element: <Aboutus/>
+        element: <Aboutus/>,
+        loader: async()=>{
+          // console.log('fetching about us')
+          const aboutus=await axios.get('http://localhost:4000/api/about-us')
+          const teams= await axios.get('http://localhost:4000/api/team')
+          return {aboutusData: aboutus.data, teamsData: teams.data}
+        }
       },
       {
         path:'lebnenele',
@@ -66,4 +73,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <RouterProvider router={router}/>
   </React.StrictMode>,
 );
+
 

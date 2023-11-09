@@ -34,26 +34,26 @@
 
 .member-position{
     color:#056839;
-    font-size: x-large;
+    font-size: 1rem;
     font-weight: bold;
 }
 
 @media (max-width: 800px) {
     .teams {
-      width: 100%; /* Expand to full width for smaller screens */
-      margin-top: 1rem; /* Adjust margin as needed */
-      gap: 2rem; /* Adjust gap as needed */
+      width: 100%;
+      margin-top: 1rem; 
+      gap: 2rem;
     }
   
     .previous-button,
     .next-button {
-      width: 4rem; /* Adjust button size for smaller screens */
-      height: 1.25rem; /* Adjust button size for smaller screens */
+      width: 4rem;
+      height: 1.25rem;
     }
   
     .team-member {
-      width: 100%; /* Expand to full width for smaller screens */
-      margin-top: 1rem; /* Adjust margin as needed */
+      width: 100%; 
+      margin-top: 1rem;
     }
   
     .profile-picture {

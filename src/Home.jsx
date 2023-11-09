@@ -6,7 +6,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import "./home.css"
 
 const Home = () =>{
-    const articles= useLoaderData(); 
+    const articles= useLoaderData();
     const images =articles.map(a => {
     return`https://tpll-31oj.onrender.com/${a.image}`
     })
