@@ -29,7 +29,7 @@ const Home = () =>{
         <>
         <section className="body-section">
             <div className="video-section">
-                <video className="video" autoPlay loop muted controls preload="auto">
+                <video className="video" autoPlay loop muted controls={false} preload="auto">
                     <source src={introVideo} type="video/mp4"/>
                 </video>
             </div>

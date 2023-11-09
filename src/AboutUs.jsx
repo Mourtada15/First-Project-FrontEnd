@@ -6,6 +6,8 @@ import { useLoaderData } from "react-router-dom";
 
 const AboutUs = () => {
 const {aboutusData,teamsData}=useLoaderData();
+console.log(aboutusData)
+console.log(teamsData)
   
   const teamsPerPage=2;
   const totalTeams=teamsData.length;
@@ -29,7 +31,7 @@ const {aboutusData,teamsData}=useLoaderData();
     <>
       <section className="body-section">
         <div className="image-section">
-          <img className="aboutus-image" src={`http://localhost:4000/${aboutusData.image}`}></img>
+          <img className="aboutus-image" src={`https://tpll-31oj.onrender.com/${aboutusData.image}`}></img>
         </div>
         <div className="story-section">
           <div className="title">
