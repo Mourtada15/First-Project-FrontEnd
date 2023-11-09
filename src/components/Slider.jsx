@@ -37,7 +37,7 @@ console.log(milestonesData)
             className={`slide flex ${index === currentIndex ? 'active' : ''}`}
           >
             <div className="slide-image slider-link prev">
-              <img src={`http://localhost:5000/${item.image}`} alt="Slide" />
+              <img src={`http://localhost:4000/${item.image}`} alt="Slide" />
             </div>
             <div className="slide-content">
               <div className="slide-date">{`${new Date(item.createdAt).getDay()}.${new Date(item.createdAt).getMonth()}.${new Date(item.createdAt).getFullYear()}`}</div>
