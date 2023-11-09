@@ -3,15 +3,17 @@ import ReactDOM from 'react-dom/client'
 import Home from './Home.jsx'
 import News from './News.jsx'
 import Aboutus from './AboutUs.jsx'
-import { createBrowserRouter,RouterProvider} from 'react-router-dom'
+import { createBrowserRouter,redirect,RouterProvider} from 'react-router-dom'
 import axios from 'axios'
 import Article from './components/article.jsx'
 import App from './App.jsx'
 import Lebnenele from '/src/Pages/Lebnene_Ele/Lebnene_Ele.jsx'
+import AdminDashboard from './admin-dashboard.jsx'
+import AdminArticles from './components/admin-article.jsx'
 
 const router = createBrowserRouter([
   {
-    path:'/',
+    path:'*',
     element:<App/>,
     children:[
       {
@@ -30,18 +32,14 @@ const router = createBrowserRouter([
           const response = await axios.get("https://tpll-31oj.onrender.com/api/article/");
           return response.data;
         },
-        children:[
-          {
-            path:'article/:postId',
-            element:<Article/>,
-            loader: async({params})=>{
-              const article =await axios.get(`https://tpll-31oj.onrender.com/api/article/${params.postId}`);
-              // const recentArticles= await axios.get("http://localhost:8000/api/article/recent-articles");
-              const response={article:article.data};
-              return response;
-            }
-          },
-        ]
+      },
+      {
+        path:'news/:postId',
+        element:<Article/>,
+        loader: async({params})=>{
+          const response =await axios.get(`http://localhost:8000/api/article/${params.postId}`);
+          return response.data;
+        }
       },
       
       {
@@ -54,7 +52,30 @@ const router = createBrowserRouter([
       }
     ]
     },
-    
+    {
+      path:'/admin/dashboard/',
+      element:<AdminDashboard/>,
+      children:[
+        {
+          path:'News',
+          element:<AdminArticles/>,
+          loader: async ()=>{
+            const response =await axios.get("http://localhost:8000/api/article/");
+            return response.data;
+          } ,
+          
+        },
+        {
+          path:'News/delete/:id',
+          action:async ({params})=>{
+            await axios.delete(`http://localhost:8000/api/article/${params.id}`);
+             return redirect("/admin/dashboard/News");
+          }
+        }  
+      ]
+
+    },
+   
     
 ])
 
