@@ -47,13 +47,13 @@
   
     .previous-button,
     .next-button {
-      width: 4rem; /* Adjust button size for smaller screens */
-      height: 1.25rem; /* Adjust button size for smaller screens */
+      width: 4rem;
+      height: 1.25rem;
     }
   
     .team-member {
-      width: 100%; /* Expand to full width for smaller screens */
-      margin-top: 1rem; /* Adjust margin as needed */
+      width: 100%; 
+      margin-top: 1rem;
     }
   
     .profile-picture {

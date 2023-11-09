@@ -6,6 +6,8 @@ const Team = (props) => {
   const  teamsData=props
 
 
+  
+
   return (
     
       <div className='team-member'>
