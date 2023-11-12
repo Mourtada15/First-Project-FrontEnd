@@ -52,7 +52,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     flex-direction:row;
     text-align: center;
     gap: 4rem;
@@ -88,3 +88,16 @@ body{
     background-position: center; 
     background-size: 40% auto;
 }
+
+@media (max-width:  768px) {
+    .teams {
+        width: 90%; /* Adjust the width for smaller screens */
+        gap: 2rem; /* Adjust the gap for smaller screens */
+    }
+
+    .title h1{
+        font-size: 1.5rem;
+        letter-spacing: 0.188rem;
+    }
+
+  }
