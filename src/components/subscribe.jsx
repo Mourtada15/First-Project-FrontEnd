@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './subscribe.css'
+import {Form} from 'react-router-dom';
 // eslint-disable-next-line react/prop-types
 const Subscribe = ({onHide}) =>{
     const [email,setEmail]= useState('');
@@ -43,8 +44,10 @@ const Subscribe = ({onHide}) =>{
            </header>
            <div className="popup-body">
             <p className='popup-note'>Enter your email here to join our newsletter</p>
-            <input type="text" value={email} className={`popup-input ${inputBackground} `} placeholder='Email' onChange={handleEmailInput}/>
-                <button onClick={handleFormValidation} className="popup-send-btn">Send</button>
+            <Form action='subscribe' method='POST'>
+            <input name='email' type="text" value={email} className={`popup-input ${inputBackground} `} placeholder='Email' onChange={handleEmailInput}/>
+                <button onClick={handleFormValidation} type='submit' className="popup-send-btn">Send</button>
+                </Form>
            </div>
         </div>
     );
