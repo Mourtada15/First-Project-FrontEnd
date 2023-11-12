@@ -10,8 +10,7 @@ import App from './App.jsx'
 import Lebnenele from '/src/Pages/Lebnene_Ele/Lebnene_Ele.jsx'
 import AdminDashboard from './admin-dashboard.jsx'
 import AdminArticles from './components/admin-article.jsx'
-import Team from './components/Team.jsx'
-import Slider from './components/Slider.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -63,6 +62,19 @@ const router = createBrowserRouter([
           return {lebneneleData: lebneneEle.data, milestonesData: milestones.data};
         }
       },
+      {
+        path:'subscribe',
+        action:async ({request}) =>{
+          const data= await request.formData();
+          const response= await axios.post('https://tpll-31oj.onrender.com/api/news/subscribe/',{
+            body:data,
+          })
+          if(!response){
+            throw response;
+          }
+          return {ok:true}
+        }
+      }
     ]
     },
     {

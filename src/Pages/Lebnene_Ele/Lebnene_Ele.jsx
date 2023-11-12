@@ -8,7 +8,7 @@ const Lebnene_Ele = () => {
     return (
         <>
             <div className="lebneneEle-img-center">
-                <img src={`http://localhost:4000/${lebneneleData.image}`} alt="LebneneEle" className="lebneneEle-img"/>
+                <img src={`https://tpll-31oj.onrender.com/${lebneneleData.image}`} alt="LebneneEle" className="lebneneEle-img"/>
             </div>
             <div className="wrapper">
                 <section id="ourStory" className="lebneneEle-story">

@@ -11,6 +11,13 @@ const Navbar = () =>{
     const [showSubscription,setShowSubscription]= useState(false);
     const [showContactUs, setShowContactUs]= useState(false);
     const [activeLink,setActiveLink]= useState("Home");
+    const [showMenu,setShowMenu] =useState(false);
+    const handelMenu = () =>{
+        setShowMenu(true);
+    }
+    const handelHideMenu=()=>{
+        setShowMenu(false);
+    }
     console.log(activeLink);
 
     const handleShowContact = (e) =>{
@@ -57,16 +64,16 @@ const Navbar = () =>{
                 <li ><Link onClick={()=> setActiveLink("Home")} className={(activeLink=='Home')?'active-link':''} to="Home">Home</Link></li>
                 <li ><Link onClick={()=> setActiveLink("AboutUs")} className={(activeLink=='AboutUs')?'active-link':''} to="aboutus" >About Us</Link></li>
                 <li ><Link onClick={()=> setActiveLink("News")} className={(activeLink=='News')?'active-link':''} to="news" >News</Link></li>
-                <li className="dropdown"><Link onClick={()=> setActiveLink("LebneneEle")} className={` ${(activeLink=='LebneneEle')?'active-link':''}`} to="lebnenele" >Lebnene Ele 
-                       
-                </Link>
-                
-                    </li>
-                    <div className="dropdown-content">
+                <li className="dropdown" ><Link onClick={()=> setActiveLink("LebneneEle")} className={` ${(activeLink=='LebneneEle')?'active-link':''}`} to="lebnenele" >Lebnene Ele 
+                <div className="dropdown-content">
                             <a href="#ourStory">Our Story</a>
                             <a href="#milestones">Milestones</a>
                             <a href="#library">From Our Library to Yours</a>
                          </div>
+                </Link>
+                
+                    </li>
+                    
                 <li ><Link onClick={handleShowContact} to="#" >Contact Us</Link></li>
             </ul>
         </div>
