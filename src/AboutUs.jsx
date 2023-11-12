@@ -33,6 +33,8 @@ console.log(teamsData)
         <div className="image-section">
           <img className="aboutus-image" src={`https://tpll-31oj.onrender.com/${aboutusData.image}`}></img>
         </div>
+        <br/>
+        <br/>
         <div className="story-section">
           <div className="title">
             <h1>
@@ -45,6 +47,8 @@ console.log(teamsData)
             </p>
           </div>
         </div>
+        <br/>
+        <br/>
 
         <div className="mission-section">
           <div className="title">
@@ -58,6 +62,8 @@ console.log(teamsData)
             </p>
           </div>
         </div>
+        <br/>
+        <br/>
 
         <div className="vision-section">
           <div className="title">
@@ -70,7 +76,9 @@ console.log(teamsData)
             <p>{aboutusData.vision}</p>
           </div>
         </div>
-
+        
+        <br/>
+        <br/>
         <div className="team-section">
           <div className="title">
             <h1>
