@@ -53,7 +53,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     flex-direction:row;
     text-align: center;
     gap: 4rem;
@@ -92,10 +92,12 @@ body{
 
 @media (max-width:  768px) {
     .teams {
-        width: 90%; /* Adjust the width for smaller screens */
-        gap: 2rem; /* Adjust the gap for smaller screens */
+        width: 90%;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
     }
-
+   
     .title h1{
         font-size: 1.5rem;
         letter-spacing: 0.188rem;
@@ -107,4 +109,7 @@ body{
         padding: 1.5rem 2rem;
         font-family: "Avenir",sans-serif;
     }
+  
+    
+  
   }

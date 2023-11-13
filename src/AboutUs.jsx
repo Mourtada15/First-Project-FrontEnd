@@ -90,7 +90,9 @@ console.log(teamsData)
     
           {visibleTeams.map((team) => (
                 <Team key={team._id} image={team.image} name={team.name} title={team.title} />
+                
               ))}
+              
           </div>
           <div className="carousel-buttons">
             <button className='previous-button' onClick={handlePrevPage}>Previous</button>
