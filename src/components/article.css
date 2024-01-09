@@ -275,6 +275,7 @@ text-overflow: ellipsis;
     color: white;
     font-size: 1rem;
     font-weight: 500;
+    text-decoration: none;
 }
 .admin-delete--button{
     background-color: #C0202E;
@@ -290,6 +291,7 @@ text-overflow: ellipsis;
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
+    cursor: pointer;
     
 }
 

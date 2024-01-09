@@ -1,23 +1,34 @@
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import '../News.css';
 import { Form } from 'react-router-dom';
 
 
  const AdminArticles = () =>{
     const articles = useLoaderData();
-    console.log(articles);
+    
     return (
         <>
+        <div className="other-pages">
+
         {articles.map(ar=>{
             return <AdminArticle key={ar._id} ar={ar}/>
         
         })}
+        </div>
+
         </>
     )
 }
-
-
  export const AdminArticle = ({ar})=>{
+    const handleConfirmDeletion = (e) =>{
+        if (
+            !confirm(
+              "Please confirm you want to delete this record."
+            )
+          ) {
+            e.preventDefault();
+          }
+    }
     return(
     <div className="post-card">
             <article>
@@ -28,11 +39,11 @@ import { Form } from 'react-router-dom';
                     <h3>{ar.title}</h3>
             <div className="line-separator"></div>
             <div className="admin-article-control">
-                <button className="admin-edit--button">
+                <Link to={`${ar._id}/edit`} className="admin-edit--button">
                     <p>Edit</p>
-                </button>
-                <Form method='DELETE' action={`delete/${ar._id}`}>
-                <button type='submit' className="admin-delete--button">
+                </Link>
+                <Form method='DELETE' action={`${ar._id}/delete`}>
+                <button  onSubmit={handleConfirmDeletion} type='submit' className="admin-delete--button">
                     <p>Delete</p>
                 </button>
                 </Form>

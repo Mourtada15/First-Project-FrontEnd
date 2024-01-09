@@ -11,13 +11,6 @@ const Navbar = () =>{
     const [showSubscription,setShowSubscription]= useState(false);
     const [showContactUs, setShowContactUs]= useState(false);
     const [activeLink,setActiveLink]= useState("Home");
-    const [showMenu,setShowMenu] =useState(false);
-    const handelMenu = () =>{
-        setShowMenu(true);
-    }
-    const handelHideMenu=()=>{
-        setShowMenu(false);
-    }
     console.log(activeLink);
 
     const handleShowContact = (e) =>{
@@ -46,7 +39,7 @@ const Navbar = () =>{
     return(
 <header className="navbar-header">
     <div className="header-section">
-        <Link onClick={()=> setActiveLink("Home")} className={(activeLink=='Home')?'active-link':''} to="Home"><img src={logo} alt="logo-TPLL" className="header-logo"/></Link>
+        <Link onClick={()=> setActiveLink("Home")} className={(activeLink=='Home')?'active-link':''} to="/"><img src={logo} alt="logo-TPLL" className="header-logo"/></Link>
         <div className="header-btns">
             <button onClick={handleShowSubscription} className="header-subscribe-btn place-items-center">
                 <img src={subscribe} alt="subscribe to newsletter" />
@@ -61,7 +54,7 @@ const Navbar = () =>{
     <div className="header-section">
         <div className="nav-items">
             <ul>
-                <li ><Link onClick={()=> setActiveLink("Home")} className={(activeLink=='Home')?'active-link':''} to="Home">Home</Link></li>
+                <li ><Link onClick={()=> setActiveLink("Home")} className={(activeLink=='Home')?'active-link':''} to="/">Home</Link></li>
                 <li ><Link onClick={()=> setActiveLink("AboutUs")} className={(activeLink=='AboutUs')?'active-link':''} to="aboutus" >About Us</Link></li>
                 <li ><Link onClick={()=> setActiveLink("News")} className={(activeLink=='News')?'active-link':''} to="news" >News</Link></li>
                 <li className="dropdown" ><Link onClick={()=> setActiveLink("LebneneEle")} className={` ${(activeLink=='LebneneEle')?'active-link':''}`} to="lebnenele" >Lebnene Ele 

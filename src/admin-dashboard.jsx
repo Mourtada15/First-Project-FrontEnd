@@ -95,9 +95,7 @@ const AdminDashboard = () =>{
                     </div>
                   </div>
                 </div>
-                <div className="other-pages">
                   <Outlet/>
-                </div>
 
             </section>
 

@@ -10,6 +10,7 @@ import App from './App.jsx'
 import Lebnenele from '/src/Pages/Lebnene_Ele/Lebnene_Ele.jsx'
 import AdminDashboard from './admin-dashboard.jsx'
 import AdminArticles from './components/admin-article.jsx'
+import AdminForm from './components/admin-form.jsx'
 
 
 const router = createBrowserRouter([
@@ -18,7 +19,6 @@ const router = createBrowserRouter([
     element:<App/>,
     children:[
       {
-        path:'Home',
         index:true,
         element:<Home/>,
         loader: async ()=>{
@@ -65,9 +65,10 @@ const router = createBrowserRouter([
       {
         path:'subscribe',
         action:async ({request}) =>{
-          const data= await request.formData();
-          const response= await axios.post('https://tpll-31oj.onrender.com/api/news/subscribe/',{
-            body:data,
+          const formData= await request.formData();
+          const {email}= Object.fromEntries(formData);
+          const response= await axios.post('https://tpll-31oj.onrender.com/api/news/subscribe',{
+            email:email,
           })
           if(!response){
             throw response;
@@ -91,10 +92,31 @@ const router = createBrowserRouter([
           
         },
         {
-          path:'News/delete/:id',
+          path:'News/:id/delete',
           action:async ({params})=>{
             await axios.delete(`https://tpll-31oj.onrender.com/api/article/${params.id}`);
              return redirect("/admin/dashboard/News");
+          }
+        },
+        {
+          path:'News/:id/edit',
+          element:<AdminForm/>,
+          loader:async ({params}) =>{
+            const response = await axios.get(`https://tpll-31oj.onrender.com/api/article/${params.id}`);
+            return response.data;
+          },
+          action:async ({request,params}) =>{
+            const formData= await request.formData();
+            const data = Object.fromEntries(formData);
+            console.log(data);
+            const response= await axios.patch(`https://tpll-31oj.onrender.com/api/article/${params.id}`,{...data},{ headers: {
+              'Content-Type': 'multipart/form-data',
+            },});
+
+            if(!response){
+              throw response;
+            }
+            return redirect("admin/dashboard/News");
           }
         }  
       ]

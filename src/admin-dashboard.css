@@ -128,11 +128,7 @@ background-color: white;
 }
 
 
-.other-pages{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-}
+
 .active-Link{
     background-color: #D0EFB0;
 }
